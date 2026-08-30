@@ -9,8 +9,13 @@ with open("vectorizer.pkl", "rb") as f:
 SUSPICIOUS_KEYWORDS = [
     "kyc", "otp", "account will be", "account has been", "blocked", "suspended",
     "verify your account", "click the link", "urgent action", "24 hours",
-    "update your details", "bank account", "will be closed", "will be seized"
+    "update your details", "bank account", "will be closed", "will be seized",
+    "won a lottery", "you have won", "winner", "claim your prize", "claim the prize",
+    "register through the link", "register below", "click here to claim",
+    "congratulations you", "selected for", "lucky winner", "cash prize",
+    "free gift", "limited time offer", "act now", "verify your identity"
 ]
+
 
 def check_sms(message: str) -> dict:
     message_vector = vectorizer.transform([message])
