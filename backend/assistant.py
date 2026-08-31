@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from groq import Groq
 
 load_dotenv()
-client = Groq(api_key=os.getenv("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"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def explain_result(result: dict = None, question: str = None) -> str:
     if result:
